@@ -1,9 +1,13 @@
+import ListView from "../organism/ListView"
+import Header from "../molecules/Header"
+
 function ProductListPage() {
 
   return (
-    <div>
-      <h1>Hola mundo</h1>
-    </div>
+    <>
+      <Header/>
+      <ListView/>
+    </>
   )
 }
 
