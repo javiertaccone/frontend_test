@@ -1,4 +1,4 @@
-import Search from "../molecules/Search" 
+import Search from "../atoms/Search" 
 import Item from "../atoms/Item"
 
 const ListView = () => {

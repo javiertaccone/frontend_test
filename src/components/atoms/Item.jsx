@@ -1,12 +1,21 @@
+import { useNavigate } from "react-router-dom"
 import { ProductContext } from "../../context/ProductContext"
+import { SearchContext } from "../../context/SearchContext"
 import { useContext } from "react"
 
 
 const Item = () => {
 
     const {load}  = useContext(ProductContext)
-    const {product} = useContext(ProductContext)
+    const {products} = useContext(SearchContext)
     
+    const navigate = useNavigate()
+
+    const abrirDetalle = (id) => {
+      navigate(`/detail/${id}`)
+    }
+    
+
     if (load) {
         return ( 
           <h3>cargando...</h3>
@@ -16,8 +25,8 @@ const Item = () => {
     return (
       <>
         <div>
-          { product.map(item => (
-            <div key={item.id}>
+          { products.map(item => (
+            <div onClick={()=> abrirDetalle(item.id)} key={item.id}>
               <div>
                 <div>
                   <img src={item.imgUrl} alt={`${item.model}`}/>
