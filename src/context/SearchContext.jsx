@@ -10,7 +10,6 @@ const SearchContextProvider  = ( {children} ) => {
     
     const filterProducts = product.filter((item) =>{ 
         return (
-            console.log(filter),
             item.brand.toLowerCase().includes(filter.toLowerCase())||
             item.model.toLowerCase().includes(filter.toLowerCase())
         )

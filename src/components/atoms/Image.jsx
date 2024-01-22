@@ -1,9 +1,9 @@
-const Image = () => {
-    
-    return (
-        <h1>Image</h1>
-    )
+const Image = ( { product }) => {
 
+    return (
+        <img src={product.imgUrl} alt={product.model} />
+    )
+    
 }
 
 export default Image
