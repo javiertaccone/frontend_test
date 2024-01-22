@@ -1,7 +1,11 @@
 import axios from "axios"
 import { API_URL } from "../../constants/env" 
+import { useContext } from "react"
+import { CartContext } from "../../context/CartContext"
 
 const Add = ({ selectColor, selectMemory , product }) => {
+
+    const { addNewProduct } = useContext(CartContext)
 
     const sendData = () => {
         axios.post(`${API_URL}api/cart`,{
@@ -18,7 +22,10 @@ const Add = ({ selectColor, selectMemory , product }) => {
     }
 
     return (
-        <button onClick={sendData}>Agregar</button>
+        <>
+            <button onClick={sendData}>Agregar</button>
+            <button onClick={addNewProduct}>Agregar</button>
+        </>
     )
 
 }

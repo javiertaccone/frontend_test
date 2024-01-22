@@ -3,7 +3,7 @@ import { ProductContext } from "./ProductContext";
 
 const SearchContext = createContext()
 
-const SearchContextProvider  = ( {children} ) => {
+const SearchContextProvider  = ({ children }) => {
 
     const [filter, setFilter] = useState("")
     const { product } = useContext(ProductContext)

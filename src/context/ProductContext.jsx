@@ -4,7 +4,7 @@ import axios from "axios"
 
 const ProductContext = createContext()
 
-const ProductContextProvider = ( {children} ) => {
+const ProductContextProvider = ({ children }) => {
     const [product, setProduct] = useState([])
     const [load, setLoad] = useState(true)
     
