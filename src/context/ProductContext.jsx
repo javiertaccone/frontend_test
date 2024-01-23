@@ -16,7 +16,7 @@ const ProductContextProvider = ({ children }) => {
 
             if (localStorage.getItem("ProductsExpiration") === "false" ||
                 localStorage.getItem("ProductsExpiration") === null ) {
-                console.log("API")
+                console.log("Products - API")
                 axios.get(`${API_URL}api/product`)
                 .then((data) => {
                     setProduct(data.data)
@@ -30,7 +30,7 @@ const ProductContextProvider = ({ children }) => {
                 const data = JSON.parse(localStorage.getItem("Products"))
                 setProduct(data.value)
                 setLoad(false)
-                console.log("datos consumidos del local storage")
+                console.log("Products - Storage")
             }
         }
         fetchData()
