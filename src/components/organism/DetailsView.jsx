@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom"
 import axios from "axios"
 import { API_URL } from "../../constants/env" 
 import { useState, useEffect } from "react"
-
+ 
 const DetailsView = () => {
     
     const { id }= useParams()
@@ -21,7 +21,7 @@ const DetailsView = () => {
           console.error("peticion fallida", error)
       })
     }, [id])
-
+    
     return (
       <>
         {productDetil && <Image product={productDetil}/>}

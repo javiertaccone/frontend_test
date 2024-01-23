@@ -9,11 +9,21 @@ const Search = () => {
     setFilter(e.target.value)
   }
 
+  const blockEnter = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault()
+    }
+  }
+
   return (
     <>
       <form>
         <h2>Encuentra aquí tu próximo móvil</h2>
-        <input onChange={cambioFilter} type="text" placeholder="Busca por marca o modelo"/>
+        <input
+          onKeyDown={blockEnter}
+          onChange={cambioFilter}
+          type="text"
+          placeholder="Busca por marca o modelo"/>
       </form>
     </>
   )

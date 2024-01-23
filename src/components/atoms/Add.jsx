@@ -14,7 +14,7 @@ const Add = ({ selectColor, selectMemory , product }) => {
             storageCode: selectMemory,
             })
             .then((response) => {
-                console.log(response)
+                addNewProduct(response.data.count)
             })
             .catch((error) => {
                 console.log(error)
@@ -24,7 +24,6 @@ const Add = ({ selectColor, selectMemory , product }) => {
     return (
         <>
             <button onClick={sendData}>Agregar</button>
-            <button onClick={addNewProduct}>Agregar</button>
         </>
     )
 

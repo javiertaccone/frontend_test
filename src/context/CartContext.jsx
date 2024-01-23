@@ -7,12 +7,12 @@ const CartContextProvider = ({ children }) => {
 
     const [ addProducts, setAddProducts] = useState(0)
 
-    const addNewProduct = () => {
-        setAddProducts(addProducts+1)
+    const addNewProduct = (e) => {
+        setAddProducts(addProducts+e)
     }
 
     return (
-        <CartContext.Provider value={{addProducts , addNewProduct}}>
+        <CartContext.Provider value={{ addProducts , addNewProduct }}>
             {children}
         </CartContext.Provider>
     )

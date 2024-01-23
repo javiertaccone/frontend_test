@@ -27,8 +27,6 @@ const Actions = ({ product }) => {
 
   return (
     <>
-      <p>select color: {selectColor}</p>
-      <p>selec memory: {selectMemory}</p>
       <Colors product={product} changeColor={changeColor} />
       <Memory product={product} changeMemory={changeMemory} />
       <Add product={product} selectColor={selectColor} selectMemory={selectMemory} />

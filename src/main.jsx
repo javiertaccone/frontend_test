@@ -8,11 +8,11 @@ import { CartContextProvider } from './context/CartContext'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <ProductContextProvider>
-    <SearchContextProvider>
-      <CartContextProvider>
-        <RouterProvider router={router} />
-      </CartContextProvider>
-    </SearchContextProvider>
-  </ProductContextProvider>
+    <ProductContextProvider>
+      <SearchContextProvider>
+        <CartContextProvider>
+          <RouterProvider router={router} />
+        </CartContextProvider>
+      </SearchContextProvider>
+    </ProductContextProvider>
 )
