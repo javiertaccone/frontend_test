@@ -20,7 +20,7 @@ const Add = ({ selectColor, selectMemory , product }) => {
                 console.log(error)
         })
     }
-
+ 
     return (
         <>
             <button onClick={sendData}>Agregar</button>
@@ -30,3 +30,13 @@ const Add = ({ selectColor, selectMemory , product }) => {
 }
 
 export default Add
+
+/*
+if (localStorage.getItem("Cart") !== null){
+    const data = JSON.parse(localStorage.getItem("Cart"))
+    localStorage.setItem("Cart", + data)
+    addNewProduct(response.data.count)
+} else {
+    localStorage.setItem("Cart", response.data.count)
+    addNewProduct(response.data.count)
+}*/

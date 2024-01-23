@@ -5,10 +5,20 @@ const CartContext = createContext()
 
 const CartContextProvider = ({ children }) => {
 
-    const [ addProducts, setAddProducts] = useState(0)
+    const [ addProducts, setAddProducts] = useState(() => {
+        const cartValue = localStorage.getItem("Cart");
+        return isNaN(cartValue) || cartValue === null ? 0 : parseInt(cartValue);
+      })
 
     const addNewProduct = (e) => {
+        if (localStorage.getItem("Cart") !== null){
+            const data = localStorage.getItem("Cart", addProducts+e)
+            setAddProducts(addProducts+e)
+            console.log("1era opcion data:", data)
+        }
+        localStorage.setItem("Cart", addProducts+e)
         setAddProducts(addProducts+e)
+
     }
 
     return (
