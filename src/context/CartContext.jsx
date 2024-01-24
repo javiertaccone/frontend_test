@@ -12,7 +12,6 @@ const CartContextProvider = ({ children }) => {
 
     const addNewProduct = (e) => {
         if (localStorage.getItem("Cart") !== null){
-            const data = localStorage.getItem("Cart", addProducts+e)
             setAddProducts(addProducts+e)
         }
         localStorage.setItem("Cart", addProducts+e)

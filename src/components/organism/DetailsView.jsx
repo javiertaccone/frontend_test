@@ -19,7 +19,6 @@ const DetailsView = () => {
     
         if (localStorage.getItem(`Detail_${id}Expiration`) === "false" ||
             localStorage.getItem(`Detail_${id}Expiration`) === null ) {
-            console.log(`Detail${id} - API`)
             axios.get(`${API_URL}api/product/${id}`)
             .then((data) => {
               setProductDetail(data.data)
@@ -29,7 +28,6 @@ const DetailsView = () => {
                 console.error("peticion fallida", error)
             })
         } else {
-            console.log(`Detail${id} - Storage`)
             const data = JSON.parse(localStorage.getItem(`Detail_${id}`))
             setProductDetail(data.value)
         }

@@ -17,7 +17,7 @@ const Add = ({ selectColor, selectMemory , product }) => {
                 addNewProduct(response.data.count)
             })
             .catch((error) => {
-                console.log(error)
+                console.error(error)
         })
     }
  
