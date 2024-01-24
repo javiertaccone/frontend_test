@@ -5,13 +5,13 @@ const Crumbs = () => {
   const { id } = params;
 
   return (
-    <>
-        <p>
+      <div className="crumbs">
+        <p className="crumb" key="home">
           <Link to="/">Home</Link>
         </p>
-        {id && <p>Product Details</p>}
-    </>
-  );
+        {id && <p className="crumb" key="product-details">Product Details</p>}
+      </div>
+  )
 }
 
 export default Crumbs;

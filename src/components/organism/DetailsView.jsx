@@ -11,16 +11,15 @@ const DetailsView = () => {
     
     const { id }= useParams()
     const [productDetil, setProductDetail] = useState(null)
-    const { setItem, verifyExpiration } = useLocalStorage("Detail")
-
+    const { setItem, verifyExpiration } = useLocalStorage(`Detail_${id}`)
 
     useEffect(() =>{
       const fetchData = async () => {
-        await verifyExpiration("DetailExpiration")
+        await verifyExpiration(`Detail_${id}Expiration`)
     
-        if (localStorage.getItem("DetailExpiration") === "false" ||
-            localStorage.getItem("DetailExpiration") === null ) {
-            console.log("Detail - API")
+        if (localStorage.getItem(`Detail_${id}Expiration`) === "false" ||
+            localStorage.getItem(`Detail_${id}Expiration`) === null ) {
+            console.log(`Detail${id} - API`)
             axios.get(`${API_URL}api/product/${id}`)
             .then((data) => {
               setProductDetail(data.data)
@@ -30,29 +29,38 @@ const DetailsView = () => {
                 console.error("peticion fallida", error)
             })
         } else {
-            console.log("Detail - Storage")
-            const data = JSON.parse(localStorage.getItem("Detail"))
+            console.log(`Detail${id} - Storage`)
+            const data = JSON.parse(localStorage.getItem(`Detail_${id}`))
             setProductDetail(data.value)
         }
-
 
         }
       fetchData()
     }, [id])
 
-
-
-
-
-
     return (
-      <>
-        {productDetil && <Image product={productDetil}/>}
-        {productDetil && <Descriptions product={productDetil}/>}
-        {productDetil && <Actions product={productDetil}/>}
-      </>
+      <div className="view">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+                {productDetil && <Image product={productDetil}/>}
+            </div>
+            <div className="col-md-6">
+              {productDetil && <Descriptions product={productDetil}/>}
+              {productDetil && <Actions product={productDetil}/>}
+            </div>
+          </div>
+        </div>
+      </div>
     )
-
 }
 
 export default DetailsView
+
+
+/*
+      <div className="view">
+        {productDetil && <Image product={productDetil}/>}
+        {productDetil && <Descriptions product={productDetil}/>}
+        {productDetil && <Actions product={productDetil}/>}
+      </div>*/

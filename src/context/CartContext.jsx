@@ -14,7 +14,6 @@ const CartContextProvider = ({ children }) => {
         if (localStorage.getItem("Cart") !== null){
             const data = localStorage.getItem("Cart", addProducts+e)
             setAddProducts(addProducts+e)
-            console.log("1era opcion data:", data)
         }
         localStorage.setItem("Cart", addProducts+e)
         setAddProducts(addProducts+e)

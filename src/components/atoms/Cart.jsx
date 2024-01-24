@@ -6,7 +6,7 @@ const Cart = () => {
     const { addProducts } = useContext(CartContext)
     
     return (
-        <h4>{addProducts}Productos añadidos</h4>
+        <h4 className="cart">{addProducts} Productos añadidos</h4>
     )
 
 }

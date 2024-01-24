@@ -19,9 +19,9 @@ const Colors = ({ product, changeColor }) => {
       <>
         <form action="">
         {product.options.colors.map((color) => (
-          <label key={color.code}>
+          <label className="radio" key={color.code}>
             {color.name}
-            <input
+            <input 
               type="radio"
               name="color"
               value={color.code}

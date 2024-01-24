@@ -4,10 +4,10 @@ import Item from "../atoms/Item"
 const ListView = () => {
     
     return (
-      <>
+      <div className="view">
         <Search/>
         <Item/>   
-      </>
+      </div>
     )
 
 }

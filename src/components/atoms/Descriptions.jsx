@@ -1,20 +1,20 @@
 const Descriptions = ( { product }) => {
     
     return (
-        <>
-        <p className="detail">Marca: {product.brand}</p>
-        <p className="detail">Modelo: {product.model}</p>
-        <p className="detail">Precio: {product.price}</p>
-        <p className="detail">Cpu: {product.cpu}</p>
-        <p className="detail">Ram: {product.ram}</p>
-        <p className="detail">Os: {product.os}</p>
-        <p className="detail">Display: {product.displayResolution}</p>
-        <p className="detail">Bateria: {product.battery}</p>
-        <p className="detail">Camara 1: {product.primaryCamera}</p>
-        <p className="detail">Camara 2: {product.secondaryCmera}</p>
-        <p className="detail">Dimensiones: {product.dimentions}</p>
-        <p className="detail">Peso: {product.weight}</p>
-      </>
+      <div className="containdetail">
+        <p className="detail"><strong>Marca : </strong>{product.brand}</p>
+        <p className="detail"><strong>Modelo : </strong>{product.model}</p>
+        <p className="detail"><strong>Precio : </strong>{product.price}</p>
+        <p className="detail"><strong>Cpu : </strong>{product.cpu}</p>
+        <p className="detail"><strong>Ram : </strong>{product.ram}</p>
+        <p className="detail"><strong>Os : </strong>{product.os}</p>
+        <p className="detail"><strong>Display : </strong>{product.displayResolution}</p>
+        <p className="detail"><strong>Bateria : </strong>{product.battery}</p>
+        <p className="detail"><strong>Camara 1 : </strong>{product.primaryCamera}</p>
+        <p className="detail"><strong>Camara 2 : </strong>{product.secondaryCmera}</p>
+        <p className="detail"><strong>Dimensiones : </strong>{product.dimentions}</p>
+        <p className="detail"><strong>Peso : </strong>{product.weight}</p>
+      </div>
     )
 
 }

@@ -17,9 +17,9 @@ const Search = () => {
 
   return (
     <>
-      <form>
-        <h2>Encuentra aquí tu próximo móvil</h2>
-        <input
+      <form className="search text-center">
+        <h2 className="title" >Encuentra aquí tu próximo móvil</h2>
+        <input className="input text-center"
           onKeyDown={blockEnter}
           onChange={cambioFilter}
           type="text"
