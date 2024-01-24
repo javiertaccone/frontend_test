@@ -1,8 +1,8 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom'
 
 const Crumbs = () => {
-  const params = useParams();
-  const { id } = params;
+  const params = useParams()
+  const { id } = params
 
   return (
       <div className="crumbs">

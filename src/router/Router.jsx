@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     {
         path: `/detail/:id`,
         element: <ProductDetailsPage />,
-        errorElement: <Error404 />,
+        errorElement: <Error404 />
     }
 ])
 

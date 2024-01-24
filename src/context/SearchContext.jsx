@@ -1,5 +1,5 @@
-import { createContext, useContext, useState } from "react";
-import { ProductContext } from "./ProductContext";
+import { createContext, useContext, useState } from "react"
+import { ProductContext } from "./ProductContext"
 
 const SearchContext = createContext()
 

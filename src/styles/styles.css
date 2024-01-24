@@ -47,12 +47,12 @@ body {
 .brand{
     font-family: "montserrat";
     font-size: 0.95rem;
-    margin-left: 10px;
+    padding-top: 1px;
 }
 
 .price{
     font-family: "montserrat";
-    font-size: 0.85rem;
+    font-size: 0.84rem;
     font-weight: 600; 
     color: #015AFF;
 }

@@ -56,11 +56,3 @@ const DetailsView = () => {
 }
 
 export default DetailsView
-
-
-/*
-      <div className="view">
-        {productDetil && <Image product={productDetil}/>}
-        {productDetil && <Descriptions product={productDetil}/>}
-        {productDetil && <Actions product={productDetil}/>}
-      </div>*/

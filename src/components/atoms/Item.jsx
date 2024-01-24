@@ -18,7 +18,7 @@ const Item = () => {
 
     if (load) {
         return ( 
-          <h3>cargando...</h3>
+          <h4 className="text-center">cargando...</h4>
         )
       }
 
@@ -37,7 +37,7 @@ const Item = () => {
                       <h4 className="model text-center">{item.model}</h4>
                       <div className="row col-11 col-md-9 mx-auto">
                         <div className="col-6">
-                          <h5 className="brand">{item.brand}</h5>
+                          <h5 className="brand text-left">{item.brand}</h5>
                         </div>
                         <div className="col-6 ">
                           <p className="price text-center">{item.price}€ </p>
