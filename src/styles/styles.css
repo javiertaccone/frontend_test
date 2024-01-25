@@ -9,7 +9,7 @@ body {
     width: 100px;
 }
 
-/* Header */
+/* Search */
 
 .search{
     padding-top: 2%;
@@ -112,8 +112,6 @@ body {
     margin-top: 2%;
     border-top-left-radius: 120px;
     border-top-right-radius: 120px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
     background-color:  #f5f5f5;
     min-height: 90vh;
 }
@@ -129,7 +127,7 @@ body {
 }
 
 .detail{
-    line-height: 50%;
+    line-height: 60%;
 }
 
 .containdetail{
@@ -137,6 +135,11 @@ body {
 }
 
 /* form input type radio */
+
+.radio {
+    font-size: large;
+    font-weight: 600; 
+}
 
 .radio input[type='radio'] {
     width: 12px;
@@ -168,3 +171,125 @@ body {
     border-style: none; 
 }
 
+.button-add:active{
+    background-color: #00318b;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+/* Search */
+
+.search{
+    padding-top: 8%;
+    padding-bottom: 10%;
+}
+
+.title{
+    font-size: 1.2rem;
+    padding-bottom: 3%;
+    padding-left: 20%;
+    padding-right: 20%;
+    line-height: 1.8rem;
+}
+
+.input{
+    font-family: "montserrat";
+    padding: 0.8%;
+    border-radius: 20px;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 72%;
+}
+
+
+/* Menú */
+  
+.container-menu {
+    padding-top: 6%;
+    padding-bottom: 3%;
+}
+
+.crumb{
+    padding-top: 10%;
+}
+
+/* List View */
+
+.view{
+    margin-top: 2%;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    background-color:  #f5f5f5;
+    min-height: 90vh;
+}
+
+/* Product card */
+
+.model{
+    font-size: 1.2rem;
+}
+
+.brand{
+    font-size: 1.1rem;
+}
+
+.price{
+    font-size: 1rem;
+}
+
+.productContainer { 
+    margin-bottom: 15%;    
+}
+
+/* Detail View */
+
+.containerimgdetail {
+    text-align: center;
+    margin-top: 12%;
+}
+
+.imgdetail {
+    width: 25vh;
+}
+
+.containdetail{
+    padding-top: 10%;
+
+}
+
+.detail{
+    line-height: 120%;
+    margin-bottom: 3%;
+}
+
+.view{
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+/* form input type radio */
+
+.form{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container-button{
+    display: flex;
+    justify-content: end;
+}
+
+.button-add{
+    margin-bottom: 20%;
+}
+
+.radio input[type='radio'] {
+    width: 15px;
+    height: 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+  }
+
+}

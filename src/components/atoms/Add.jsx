@@ -22,11 +22,10 @@ const Add = ({ selectColor, selectMemory , product }) => {
     }
  
     return (
-        <>
+        <div className="container-button">
             <button className="button-add" onClick={sendData}>Agregar</button>
-        </>
+        </div>
     )
-
 }
 
 export default Add

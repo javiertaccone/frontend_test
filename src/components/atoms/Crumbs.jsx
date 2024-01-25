@@ -9,7 +9,7 @@ const Crumbs = () => {
         <p className="crumb" key="home">
           <Link to="/">Home</Link>
         </p>
-        {id && <p className="crumb" key="product-details">Product Details</p>}
+        {id && <p className="crumb" key="product-details">Product</p>}
       </div>
   )
 }

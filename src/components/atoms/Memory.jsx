@@ -17,7 +17,7 @@ const Memory = ({ product, changeMemory}) => {
     if (qtyMemory != 0){
     return(
       <>
-        <form action="">
+        <form className="form" action="">
         {product.options.storages.map((memory) => (
           <label className="radio" key={memory.code}>
             {memory.name}

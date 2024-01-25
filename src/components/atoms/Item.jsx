@@ -26,7 +26,7 @@ const Item = () => {
       <>
         <div className="grid row col-11 col-md-11 mx-auto">
           {products.map(item => (
-            <div key={item.id} className="row col-11 col-md-3 mx-auto">
+            <div key={item.id} className="row col-12 col-md-3 mx-auto">
               <div onClick={() => abrirDetalle(item.id)} className="productContainer row g-0 col-10 col-md-9 mx-auto">
                 <div className="text-center">
                   <img className="productImg" src={item.imgUrl} alt={`${item.model}`} />
@@ -40,7 +40,7 @@ const Item = () => {
                           <h5 className="brand text-left">{item.brand}</h5>
                         </div>
                         <div className="col-6 ">
-                          <p className="price text-center">{item.price}€ </p>
+                          <p className="price text-end">{item.price}€ </p>
                         </div>
                       </div>
                     </div>

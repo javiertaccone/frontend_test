@@ -17,7 +17,7 @@ const Colors = ({ product, changeColor }) => {
     if (qtyColors != 0){
     return(
       <>
-        <form action="">
+        <form className="form" action="">
         {product.options.colors.map((color) => (
           <label className="radio" key={color.code}>
             {color.name}
