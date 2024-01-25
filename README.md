@@ -1,5 +1,7 @@
 # Front-end Test
 
+Para ver la aplicación ya desplegada https://frontend-test.vercel.app/
+
 ## Descripción 
     Desarrollo de una SPA con react, esta aplicación consta
     de 2 vistas, Product List Page y Product Details Page
