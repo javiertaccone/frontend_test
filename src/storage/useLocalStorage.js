@@ -1,31 +1,30 @@
 export const useLocalStorage = (key) => {
+    const getItem = () => {
+        const storedData = localStorage.getItem(key);
+        if (storedData !== null) {
+            const data = JSON.parse(storedData);
+            const now = new Date().getTime();
+            if (now > data.expiration) {
+                data.expired = true;
+                localStorage.setItem(key, JSON.stringify(data));
+                console.log(`${key} ha expirado.`);
+            }
+            return data;
+        }
+        return null;
+    };
 
     const setItem = (value) => {
-        const now = new Date ()
-        const expiration = new Date(now.getTime() + 60 * 10000) //probando con un minuto
+        const now = new Date().getTime();
+        const expiration = now + 30000; // medio minuto
         const item = {
-          value: value,
-          expiration: expiration.getTime()
-        }   
-        localStorage.setItem(key, JSON.stringify(item))
-    }
+            value: value,
+            expiration: expiration,
+            expired: false,
+        };
+        localStorage.setItem(key, JSON.stringify(item));
+        console.log(`${key} ha sido establecido.`);
+    };
 
-    const verifyExpiration = async (key) => {
-        return new Promise((resolve)=> {
-            if (localStorage.getItem(key) !== null) {
-                const now = new Date ()
-                const nowConvert = now.getTime()
-                const data = JSON.parse(localStorage.getItem(key))
-                const expiration = data.expiration
-                nowConvert > expiration ? localStorage.setItem(key, "false") : localStorage.setItem(key, "true")
-                resolve()
-            } else {
-                localStorage.setItem(key, "false")
-                resolve()
-            }
-        })
-    }
-
-    return { setItem, verifyExpiration }
-} 
-
+    return { getItem, setItem };
+};
