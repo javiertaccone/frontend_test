@@ -16,7 +16,7 @@ export const useLocalStorage = (key) => {
 
     const setItem = (value) => {
         const now = new Date().getTime();
-        const expiration = now + 30000; // medio minuto
+        const expiration = now + 3600000;
         const item = {
             value: value,
             expiration: expiration,

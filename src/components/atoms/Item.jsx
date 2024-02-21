@@ -29,7 +29,7 @@ const Item = () => {
             <div key={item.id} className="row col-12 col-md-3 mx-auto">
               <div onClick={() => abrirDetalle(item.id)} className="productContainer row g-0 col-10 col-md-9 mx-auto">
                 <div className="text-center">
-                  <img className="productImg" src={item.imgUrl} alt={`${item.model}`} />
+                  <img className="productImg" src={item.imgUrl} loading="lazy" alt={`${item.model}`} />
                 </div>
                 <div className="container">
                   <div className="row justify-content-center">
